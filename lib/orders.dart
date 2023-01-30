@@ -67,7 +67,7 @@ class Orders extends StatelessWidget {
                   ),
                   ListTile(
                     title: Text(ordersList[index].delivery.toString()),
-                    subtitle: Text(ordersList[index].deliveryDate.toString()),
+                    subtitle: Text(ordersList[index].pickupDate.toString()),
                     iconColor: Colors.black,
                     dense: true,
                     minVerticalPadding: 0,
@@ -77,7 +77,7 @@ class Orders extends StatelessWidget {
                   ),
                   ListTile(
                     title: Text(ordersList[index].pickup.toString()),
-                    subtitle: Text(ordersList[index].pickupDate.toString()),
+                    subtitle: Text(ordersList[index].deliveryDate.toString()),
                     iconColor: Colors.black,
                     minVerticalPadding: 0,
                     dense: true,
