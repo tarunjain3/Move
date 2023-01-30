@@ -39,7 +39,8 @@ class MyApp extends StatelessWidget {
           ),
           headline3: TextStyle(
             color: Colors.black,
-            fontSize: 14,
+            fontSize: 12,
+            fontWeight: FontWeight.bold,
           ),
           // headline4: TextStyle(
           //   color: Colors.black,
@@ -48,11 +49,11 @@ class MyApp extends StatelessWidget {
           // ),
           bodyText1: TextStyle(
             color: Colors.black,
-            fontSize: 16,
+            fontSize: 15,
           ),
           bodyText2: TextStyle(
             color: Colors.grey,
-            fontSize: 16,
+            fontSize: 15,
           ),
         ),
       ),

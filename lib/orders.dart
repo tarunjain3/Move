@@ -30,6 +30,7 @@ class Orders extends StatelessWidget {
           }),
           child: Card(
             elevation: 3,
+            margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(22),
             ),
@@ -42,7 +43,16 @@ class Orders extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(ordersList[index].price),
+                      Text(
+                        ordersList[index].price,
+                        style: TextStyle(
+                          color: const Color(0xFF616161),
+                          fontSize: ordersList[index].price != 'Price Pending'
+                              ? 16
+                              : 12,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                       Container(
                         padding: const EdgeInsets.symmetric(
                             horizontal: 8, vertical: 4),
@@ -56,22 +66,31 @@ class Orders extends StatelessWidget {
                     ],
                   ),
                   ListTile(
-                    contentPadding: const EdgeInsets.all(0),
-                    leading: const Icon(Icons.location_on_rounded),
                     title: Text(ordersList[index].delivery.toString()),
                     subtitle: Text(ordersList[index].deliveryDate.toString()),
+                    iconColor: Colors.black,
+                    dense: true,
+                    minVerticalPadding: 0,
+                    minLeadingWidth: 15,
+                    contentPadding: const EdgeInsets.all(0),
+                    leading: const Icon(Icons.location_on_rounded),
                   ),
                   ListTile(
-                    contentPadding: const EdgeInsets.all(0),
-                    leading: const Icon(Icons.flag_rounded),
                     title: Text(ordersList[index].pickup.toString()),
                     subtitle: Text(ordersList[index].pickupDate.toString()),
+                    iconColor: Colors.black,
+                    minVerticalPadding: 0,
+                    dense: true,
+                    minLeadingWidth: 15,
+                    contentPadding: const EdgeInsets.all(0),
+                    leading: const Icon(Icons.flag_rounded),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                          '${ordersList[index].quantity} Tonne | ${ordersList[index].material} | ${ordersList[index].vehicle}'),
+                          '${ordersList[index].quantity} Tonne | ${ordersList[index].material} | ${ordersList[index].vehicle}',
+                          style: Theme.of(context).textTheme.headline3),
                       IconButton(
                         onPressed: (() {
                           print('Pressed');
