@@ -29,7 +29,7 @@ class Orders extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(ordersList[index].price.toString()),
+                      Text(ordersList[index].price),
                       Container(
                         padding: const EdgeInsets.symmetric(
                             horizontal: 8, vertical: 4),
@@ -37,7 +37,8 @@ class Orders extends StatelessWidget {
                           color: Color(0xFFBBDEFB),
                           borderRadius: BorderRadius.all(Radius.circular(50)),
                         ),
-                        child: Text(ordersList[index].status.toString()),
+                        child: Text(ordersList[index].status,
+                            style: Theme.of(context).textTheme.headline3),
                       )
                     ],
                   ),

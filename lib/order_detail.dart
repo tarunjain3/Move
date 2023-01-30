@@ -28,14 +28,13 @@ class OrderDetails extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          const Text(
+                          Text(
                             'Pickup Location',
-                            style: TextStyle(fontSize: 16, color: Colors.grey),
+                            style: Theme.of(context).textTheme.bodyText2,
                           ),
                           Text(
                             order.pickup,
-                            style: const TextStyle(
-                                fontSize: 16, color: Colors.black87),
+                            style: Theme.of(context).textTheme.bodyText1,
                           ),
                         ],
                       ),
@@ -45,14 +44,13 @@ class OrderDetails extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          const Text(
+                          Text(
                             'Drop Location',
-                            style: TextStyle(fontSize: 16, color: Colors.grey),
+                            style: Theme.of(context).textTheme.bodyText2,
                           ),
                           Text(
                             order.delivery,
-                            style: const TextStyle(
-                                fontSize: 16, color: Colors.black87),
+                            style: Theme.of(context).textTheme.bodyText1,
                           ),
                         ],
                       ),
@@ -62,14 +60,13 @@ class OrderDetails extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          const Text(
+                          Text(
                             'Order Id',
-                            style: TextStyle(fontSize: 16, color: Colors.grey),
+                            style: Theme.of(context).textTheme.bodyText2,
                           ),
                           Text(
                             order.id,
-                            style: const TextStyle(
-                                fontSize: 16, color: Colors.black87),
+                            style: Theme.of(context).textTheme.bodyText1,
                           ),
                         ],
                       ),
@@ -79,14 +76,13 @@ class OrderDetails extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          const Text(
+                          Text(
                             'Pickup date',
-                            style: TextStyle(fontSize: 16, color: Colors.grey),
+                            style: Theme.of(context).textTheme.bodyText2,
                           ),
                           Text(
                             order.pickupDate,
-                            style: const TextStyle(
-                                fontSize: 16, color: Colors.black87),
+                            style: Theme.of(context).textTheme.bodyText1,
                           ),
                         ],
                       ),
@@ -96,14 +92,13 @@ class OrderDetails extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          const Text(
+                          Text(
                             'Preferred Vehicle',
-                            style: TextStyle(fontSize: 16, color: Colors.grey),
+                            style: Theme.of(context).textTheme.bodyText2,
                           ),
                           Text(
                             order.vehicle,
-                            style: const TextStyle(
-                                fontSize: 16, color: Colors.black87),
+                            style: Theme.of(context).textTheme.bodyText1,
                           ),
                         ],
                       ),
@@ -113,14 +108,13 @@ class OrderDetails extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          const Text(
+                          Text(
                             'Quantity of load',
-                            style: TextStyle(fontSize: 16, color: Colors.grey),
+                            style: Theme.of(context).textTheme.bodyText2,
                           ),
                           Text(
                             order.quantity,
-                            style: const TextStyle(
-                                fontSize: 16, color: Colors.black87),
+                            style: Theme.of(context).textTheme.bodyText1,
                           ),
                         ],
                       ),
@@ -130,14 +124,13 @@ class OrderDetails extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          const Text(
+                          Text(
                             'Material Type',
-                            style: TextStyle(fontSize: 16, color: Colors.grey),
+                            style: Theme.of(context).textTheme.bodyText2,
                           ),
                           Text(
                             order.material,
-                            style: const TextStyle(
-                                fontSize: 16, color: Colors.black87),
+                            style: Theme.of(context).textTheme.bodyText1,
                           ),
                         ],
                       ),
@@ -162,12 +155,9 @@ class OrderDetails extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text(
+                      Text(
                         'Truck and Driver',
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                        ),
+                        style: Theme.of(context).textTheme.headline2,
                       ),
                       const SizedBox(
                         height: 8,

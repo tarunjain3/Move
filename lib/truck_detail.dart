@@ -27,26 +27,23 @@ class TruckDetails extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
+                  Text(
                     'Truck and Driver',
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: Theme.of(context).textTheme.headline2,
                   ),
                   const SizedBox(
                     height: 16,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
+                    children: [
                       Text(
                         'Truck Id',
-                        style: TextStyle(fontSize: 16, color: Colors.grey),
+                        style: Theme.of(context).textTheme.bodyText2,
                       ),
                       Text(
                         '35',
-                        style: TextStyle(fontSize: 16, color: Colors.black87),
+                        style: Theme.of(context).textTheme.bodyText1,
                       ),
                     ],
                   ),
@@ -55,14 +52,14 @@ class TruckDetails extends StatelessWidget {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
+                    children: [
                       Text(
                         'Truck Registeration Number',
-                        style: TextStyle(fontSize: 16, color: Colors.grey),
+                        style: Theme.of(context).textTheme.bodyText2,
                       ),
                       Text(
                         'W34567',
-                        style: TextStyle(fontSize: 16, color: Colors.black87),
+                        style: Theme.of(context).textTheme.bodyText1,
                       ),
                     ],
                   ),
@@ -71,27 +68,27 @@ class TruckDetails extends StatelessWidget {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
+                    children: [
                       Text(
                         'Driver Name',
-                        style: TextStyle(fontSize: 16, color: Colors.grey),
+                        style: Theme.of(context).textTheme.bodyText2,
                       ),
                       Text(
                         'Sanchit Nar',
-                        style: TextStyle(fontSize: 16, color: Colors.black87),
+                        style: Theme.of(context).textTheme.bodyText1,
                       ),
                     ],
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
+                    children: [
                       Text(
                         'Driver Phone Number',
-                        style: TextStyle(fontSize: 16, color: Colors.grey),
+                        style: Theme.of(context).textTheme.bodyText2,
                       ),
                       Text(
                         '9876543210',
-                        style: TextStyle(fontSize: 16, color: Colors.black87),
+                        style: Theme.of(context).textTheme.bodyText1,
                       ),
                     ],
                   ),

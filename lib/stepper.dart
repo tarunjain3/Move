@@ -20,10 +20,7 @@ class StepperCount extends StatelessWidget {
           padding: const EdgeInsets.all(16),
           child: Text(
             title,
-            style: const TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-            ),
+            style: Theme.of(context).textTheme.headline2,
           ),
         ),
         SizedBox(

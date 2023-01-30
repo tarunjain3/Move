@@ -15,26 +15,23 @@ class FleetDetails extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
+            Text(
               'Fleet Details',
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
+              style: Theme.of(context).textTheme.headline2,
             ),
             const SizedBox(
               height: 16,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
+              children: [
                 Text(
                   'Company Name',
-                  style: TextStyle(fontSize: 16, color: Colors.grey),
+                  style: Theme.of(context).textTheme.bodyText2,
                 ),
                 Text(
                   'SN Logistics',
-                  style: TextStyle(fontSize: 16, color: Colors.black87),
+                  style: Theme.of(context).textTheme.bodyText1,
                 ),
               ],
             ),
@@ -43,14 +40,14 @@ class FleetDetails extends StatelessWidget {
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
+              children: [
                 Text(
                   'Operator Name',
-                  style: TextStyle(fontSize: 16, color: Colors.grey),
+                  style: Theme.of(context).textTheme.bodyText2,
                 ),
                 Text(
                   'Sanchit Nar',
-                  style: TextStyle(fontSize: 16, color: Colors.black87),
+                  style: Theme.of(context).textTheme.bodyText1,
                 ),
               ],
             ),
@@ -59,14 +56,14 @@ class FleetDetails extends StatelessWidget {
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
+              children: [
                 Text(
                   'Phone Number',
-                  style: TextStyle(fontSize: 16, color: Colors.grey),
+                  style: Theme.of(context).textTheme.bodyText2,
                 ),
                 Text(
                   '1234567890',
-                  style: TextStyle(fontSize: 16, color: Colors.black87),
+                  style: Theme.of(context).textTheme.bodyText1,
                 ),
               ],
             ),

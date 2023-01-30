@@ -12,16 +12,13 @@ class HomePage extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: const Text('My Loads'),
-          bottom: const TabBar(
-            indicatorColor: Color(0xFF4FC3F7),
+          bottom:  TabBar(
+            indicatorColor: const Color(0xFF4FC3F7),
             indicatorWeight: 5,
-            labelColor: Color(0xFF4FC3F7),
+            labelColor: const Color(0xFF4FC3F7),
             unselectedLabelColor: Colors.black,
-            labelStyle: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-            ),
-            tabs: [
+            labelStyle: Theme.of(context).textTheme.headline2,
+            tabs: const [
               Tab(text: 'Ongoing'),
               Tab(text: 'Past'),
             ],

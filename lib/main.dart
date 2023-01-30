@@ -25,6 +25,35 @@ class MyApp extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
+        textTheme: const TextTheme(
+          headline1: TextStyle(
+            color: Colors.black,
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+          ),
+          headline2: TextStyle(
+            color: Colors.black,
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+          ),
+          headline3: TextStyle(
+            color: Colors.black,
+            fontSize: 14,
+          ),
+          // headline4: TextStyle(
+          //   color: Colors.black,
+          //   fontSize: 14,
+          //   fontWeight: FontWeight.bold,
+          // ),
+          bodyText1: TextStyle(
+            color: Colors.black,
+            fontSize: 16,
+          ),
+          bodyText2: TextStyle(
+            color: Colors.grey,
+            fontSize: 16,
+          ),
+        ),
       ),
       initialRoute: HomePage.routeName,
       routes: {
