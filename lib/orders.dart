@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
 import './data/orders.dart';
 
-class Orders extends StatefulWidget {
+class Orders extends StatelessWidget {
   final String type;
   const Orders({Key? key, required this.type}) : super(key: key);
 
-  @override
-  State<Orders> createState() => _OrdersState();
-}
-
-class _OrdersState extends State<Orders> {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(

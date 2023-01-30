@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
 import 'orders.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget {
   static const routeName = '/home';
   const HomePage({Key? key}) : super(key: key);
 
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -32,14 +27,16 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
         ),
-        body: const TabBarView(
-          children: [
-            Center(
-                child: Orders(
-              type: 'Ongoing',
-            )),
-            Center(child: Orders(type: 'Past')),
-          ],
+        body: const SafeArea(
+          child: TabBarView(
+            children: [
+              Center(
+                  child: Orders(
+                type: 'Ongoing',
+              )),
+              Center(child: Orders(type: 'Past')),
+            ],
+          ),
         ),
       ),
     );
