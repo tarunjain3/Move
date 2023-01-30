@@ -1,40 +1,62 @@
 import 'package:flutter/material.dart';
-import 'orders.dart';
+import 'package:move/tab_bar.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   static const routeName = '/home';
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  int _selectedIndex = 1;
+  static const TextStyle optionStyle =
+      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+  static const List<Widget> _widgetOptions = <Widget>[
+    Text(
+      'Home',
+      style: optionStyle,
+    ),
+    OrdersTabBar(),
+    Text(
+      'Account',
+      style: optionStyle,
+    ),
+  ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 2,
-      child: Scaffold(
-        appBar: AppBar(
-          title: const Text('My Loads'),
-          bottom: TabBar(
-            indicatorColor: const Color(0xFF4FC3F7),
-            indicatorWeight: 5,
-            labelColor: const Color(0xFF4FC3F7),
-            unselectedLabelColor: Colors.black,
-            labelStyle: Theme.of(context).textTheme.headline2,
-            tabs: const [
-              Tab(text: 'Ongoing'),
-              Tab(text: 'Past'),
-            ],
-          ),
+    return Scaffold(
+      body: SafeArea(
+        child: Center(
+          child: _widgetOptions.elementAt(_selectedIndex),
         ),
-        body: const SafeArea(
-          child: TabBarView(
-            children: [
-              Center(
-                  child: Orders(
-                type: 'ongoing',
-              )),
-              Center(child: Orders(type: 'past')),
-            ],
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
           ),
-        ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.fire_truck),
+            label: 'My Loads',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Account',
+          ),
+        ],
+        currentIndex: _selectedIndex,
+        onTap: _onItemTapped,
+        selectedItemColor: const Color(0xFF4FC3F7),
       ),
     );
   }
