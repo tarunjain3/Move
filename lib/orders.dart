@@ -1,12 +1,25 @@
 import 'package:flutter/material.dart';
 import './data/orders.dart';
+import './model/order.dart';
 
 class Orders extends StatelessWidget {
   final String type;
   const Orders({Key? key, required this.type}) : super(key: key);
+  List<Order> getOrders() {
+    if (type == 'past') {
+      return allOrdersList
+          .where((order) => order.status == 'Completed')
+          .toList();
+    } else {
+      return allOrdersList
+          .where((order) => order.status != 'Completed')
+          .toList();
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
+    final List<Order> ordersList = getOrders();
     return ListView.builder(
       itemCount: ordersList.length,
       itemBuilder: (context, index) {

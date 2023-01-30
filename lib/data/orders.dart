@@ -1,6 +1,6 @@
 import '../model/order.dart';
 
-const List<Order> ordersList = [
+const List<Order> allOrdersList = [
   Order(
     id: '1',
     price: '₹ 2000.0',
@@ -120,5 +120,29 @@ const List<Order> ordersList = [
     delivery: 'Delhi Devision, Delhi',
     deliveryDate: '31-Jan-23',
     status: 'Completed',
+  ),
+  Order(
+    id: '11',
+    price: '₹ 1000.0',
+    quantity: '10.0',
+    material: 'Furniture',
+    vehicle: 'Container',
+    pickup: 'Delhi Devision, Delhi',
+    pickupDate: 'To be determined',
+    delivery: 'Delhi Devision, Delhi',
+    deliveryDate: '31-Jan-23',
+    status: 'In Progress',
+  ),
+  Order(
+    id: '12',
+    price: '₹ 1000.0',
+    quantity: '10.0',
+    material: 'Furniture',
+    vehicle: 'Container',
+    pickup: 'Delhi Devision, Delhi',
+    pickupDate: 'To be determined',
+    delivery: 'Delhi Devision, Delhi',
+    deliveryDate: '31-Jan-23',
+    status: 'Pending',
   ),
 ];

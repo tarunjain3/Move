@@ -12,7 +12,7 @@ class HomePage extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: const Text('My Loads'),
-          bottom:  TabBar(
+          bottom: TabBar(
             indicatorColor: const Color(0xFF4FC3F7),
             indicatorWeight: 5,
             labelColor: const Color(0xFF4FC3F7),
@@ -29,9 +29,9 @@ class HomePage extends StatelessWidget {
             children: [
               Center(
                   child: Orders(
-                type: 'Ongoing',
+                type: 'ongoing',
               )),
-              Center(child: Orders(type: 'Past')),
+              Center(child: Orders(type: 'past')),
             ],
           ),
         ),
