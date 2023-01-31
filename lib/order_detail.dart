@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:move/utils/stepper.dart';
 import './model/order.dart';
 import 'UI/orders/fleet_details.dart';
 
@@ -14,7 +15,8 @@ class OrderDetails extends StatelessWidget {
           title: Text('Order: # ${order.id}'),
         ),
         body: SafeArea(
-          child: Column(
+          child: ListView(
+            padding: const EdgeInsets.all(8),
             children: [
               Card(
                 elevation: 3,
@@ -141,6 +143,14 @@ class OrderDetails extends StatelessWidget {
               const SizedBox(
                 height: 16,
               ),
+              const StepperCount(
+                title: 'Load Status',
+                currentStep: 3,
+                stepsList: ['Quotated', 'Scheduled', 'In Progress'],
+              ),
+              const SizedBox(
+                height: 16,
+              ),
               const FleetDetails(),
               const SizedBox(
                 height: 16,
@@ -219,7 +229,7 @@ class OrderDetails extends StatelessWidget {
                                           fontWeight: FontWeight.bold),
                                     ),
                                   ],
-                                )
+                                ),
                               ]),
                               TextButton(
                                 style: TextButton.styleFrom(
