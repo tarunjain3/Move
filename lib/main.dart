@@ -48,7 +48,7 @@ class MyApp extends StatelessWidget {
           //   fontWeight: FontWeight.bold,
           // ),
           bodyText1: TextStyle(
-            color: Colors.black,
+            color: Colors.black87,
             fontSize: 15,
           ),
           bodyText2: TextStyle(
