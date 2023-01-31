@@ -42,30 +42,31 @@ class OrderDetails extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(
-                            'Pickup Location',
-                            style: Theme.of(context).textTheme.bodyText2,
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Pickup Location',
+                                style: Theme.of(context).textTheme.bodyText2,
+                              ),
+                              Text(
+                                order.pickup,
+                                style: Theme.of(context).textTheme.bodyText1,
+                              ),
+                              const SizedBox(
+                                height: 16,
+                              ),
+                              Text(
+                                'Drop Location',
+                                style: Theme.of(context).textTheme.bodyText2,
+                              ),
+                              Text(
+                                order.delivery,
+                                style: Theme.of(context).textTheme.bodyText1,
+                              ),
+                            ],
                           ),
-                          Text(
-                            order.pickup,
-                            style: Theme.of(context).textTheme.bodyText1,
-                          ),
-                        ],
-                      ),
-                      const SizedBox(
-                        height: 16,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            'Drop Location',
-                            style: Theme.of(context).textTheme.bodyText2,
-                          ),
-                          Text(
-                            order.delivery,
-                            style: Theme.of(context).textTheme.bodyText1,
-                          ),
+                          const Icon(Icons.fire_truck_outlined, size: 140),
                         ],
                       ),
                       const SizedBox(
@@ -127,7 +128,7 @@ class OrderDetails extends StatelessWidget {
                             style: Theme.of(context).textTheme.bodyText2,
                           ),
                           Text(
-                            order.quantity,
+                            '${order.quantity} Tonne',
                             style: Theme.of(context).textTheme.bodyText1,
                           ),
                         ],
