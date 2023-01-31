@@ -65,25 +65,47 @@ class Orders extends StatelessWidget {
                       )
                     ],
                   ),
-                  ListTile(
-                    title: Text(ordersList[index].delivery.toString()),
-                    subtitle: Text(ordersList[index].pickupDate.toString()),
-                    iconColor: Colors.black,
-                    dense: true,
-                    minVerticalPadding: 0,
-                    minLeadingWidth: 15,
-                    contentPadding: const EdgeInsets.all(0),
-                    leading: const Icon(Icons.location_on_rounded),
-                  ),
-                  ListTile(
-                    title: Text(ordersList[index].pickup.toString()),
-                    subtitle: Text(ordersList[index].deliveryDate.toString()),
-                    iconColor: Colors.black,
-                    minVerticalPadding: 0,
-                    dense: true,
-                    minLeadingWidth: 15,
-                    contentPadding: const EdgeInsets.all(0),
-                    leading: const Icon(Icons.flag_rounded),
+                  Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      Column(
+                        children: [
+                          ListTile(
+                            title: Text(ordersList[index].delivery.toString()),
+                            subtitle:
+                                Text(ordersList[index].pickupDate.toString()),
+                            iconColor: Colors.black,
+                            dense: true,
+                            minVerticalPadding: 0,
+                            minLeadingWidth: 15,
+                            contentPadding: const EdgeInsets.all(0),
+                            leading: const Icon(Icons.location_on_rounded),
+                          ),
+                          ListTile(
+                            title: Text(ordersList[index].pickup.toString()),
+                            subtitle:
+                                Text(ordersList[index].deliveryDate.toString()),
+                            iconColor: Colors.black,
+                            minVerticalPadding: 0,
+                            dense: true,
+                            minLeadingWidth: 15,
+                            contentPadding: const EdgeInsets.all(0),
+                            leading: const Icon(Icons.flag_rounded),
+                          ),
+                        ],
+                      ),
+                      Positioned(
+                        top: 35,
+                        left: 10.5,
+                        child: Container(
+                          height: 50,
+                          width: 2.5,
+                          decoration: const BoxDecoration(
+                            color: Colors.black,
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
