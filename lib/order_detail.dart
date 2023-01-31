@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import './model/order.dart';
-import 'fleet_details.dart';
+import 'UI/orders/fleet_details.dart';
 
 class OrderDetails extends StatelessWidget {
   static const routeName = '/order-details';

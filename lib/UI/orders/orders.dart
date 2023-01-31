@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import './data/orders.dart';
-import './model/order.dart';
+import '../../data/orders.dart';
+import '../../model/order.dart';
 
 class Orders extends StatelessWidget {
   final String type;

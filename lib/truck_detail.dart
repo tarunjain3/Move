@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'fleet_details.dart';
-import 'stepper.dart';
+import 'UI/orders/fleet_details.dart';
+import 'utils/stepper.dart';
 
 class TruckDetails extends StatelessWidget {
   static const routeName = '/truck-details';

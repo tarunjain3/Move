@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:move/tab_bar.dart';
+import 'package:move/orders_tab_bar.dart';
 
 class HomePage extends StatefulWidget {
   static const routeName = '/home';
