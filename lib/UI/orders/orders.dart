@@ -111,14 +111,10 @@ class Orders extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                          '${ordersList[index].quantity} Tonne | ${ordersList[index].material} | ${ordersList[index].vehicle}',
-                          style: Theme.of(context).textTheme.headline3),
-                      IconButton(
-                        onPressed: (() {
-                          print('Pressed');
-                        }),
-                        icon: const Icon(Icons.arrow_forward_rounded),
-                      )
+                        '${ordersList[index].quantity} Tonne | ${ordersList[index].material} | ${ordersList[index].vehicle}',
+                        style: Theme.of(context).textTheme.headline3,
+                      ),
+                      const Icon(Icons.arrow_forward_rounded),
                     ],
                   ),
                 ],

@@ -157,7 +157,7 @@ class OrderDetails extends StatelessWidget {
               ),
               const StepperCount(
                 title: 'Load Status',
-                currentStep: 3,
+                currentStep: 2,
                 stepsList: ['Quotated', 'Scheduled', 'In Progress'],
               ),
               const SizedBox(
