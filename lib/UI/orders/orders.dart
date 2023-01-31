@@ -114,7 +114,10 @@ class Orders extends StatelessWidget {
                         '${ordersList[index].quantity} Tonne | ${ordersList[index].material} | ${ordersList[index].vehicle}',
                         style: Theme.of(context).textTheme.headline3,
                       ),
-                      const Icon(Icons.arrow_forward_rounded),
+                      const Icon(
+                        Icons.arrow_forward_rounded,
+                        color: Colors.grey,
+                      ),
                     ],
                   ),
                 ],
