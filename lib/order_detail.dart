@@ -13,6 +13,18 @@ class OrderDetails extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: Text('Order: # ${order.id}'),
+          actions: <Widget>[
+            PopupMenuButton<String>(
+              itemBuilder: (BuildContext context) {
+                return {'Option 1', 'Option 2'}.map((String choice) {
+                  return PopupMenuItem<String>(
+                    value: choice,
+                    child: Text(choice),
+                  );
+                }).toList();
+              },
+            ),
+          ],
         ),
         body: SafeArea(
           child: ListView(
